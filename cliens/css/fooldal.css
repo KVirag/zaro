@@ -17,8 +17,16 @@
     text-size-adjust: 300%;
 }
 .leiras{
-    max-width: 100px;
+    max-width: 1000px;
+    min-width: 300px;
+    padding-right: 20%;
 }
 #fokep{
 height: max-content;
+margin-left: 10%;
+}
+.fokepdiv{
+    
+height: max-content;
+margin-left: 10%;
 }

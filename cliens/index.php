@@ -32,7 +32,7 @@
     <ul class="nav-links pull-left">
       
       <li><div class="purchase-btn header-btn pull-left">
-<a href="#" title="Buy now" class="icon-shopping-cart"></a>
+<a href="index.php?prog=bongesz.php" title="Buy now" class="icon-shopping-cart"></a>
 </div></li>
       <li><div class="mobile-btn header-btn pull-left hidden-xs">
 <a href="#" title="Smartphone View" class="icon-mobile-phone" id="mobile-view"></a>

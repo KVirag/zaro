@@ -33,8 +33,8 @@
 
 <div class="o-block-group alignwide" style="padding-top:5vh;padding-bottom:5vh">
 <div class="o-block-columns">
-<div class="o-block-column">
-<figure class="o-block-image size-large"><a href="index.php?prog=termek.php?id=4"><img src="https://i.ibb.co/N3cch6d/c-m-k-p-4.jpg" alt="" id="fookep"class="o-image-19"/></a></figure>
+<div class="o-block-column fokepdiv">
+<figure class="o-block-image size-large" onclick="showdata('4')"><img src="https://i.ibb.co/N3cch6d/c-m-k-p-4.jpg" alt="" id="fookep4"class="o-image-19"/></figure>
 </div>
 
 
@@ -113,14 +113,18 @@
     document.getElementById("fotermeknev").innerHTML=``;
     document.getElementById("fophpar").innerHTML=``;
     document.getElementById("leiras").innerHTML=``;
-    document.getElementById("fookep").src=``;
+    document.getElementById("fookep4").src=``;
 
     for(let obj of data){
     document.getElementById("fotermeknev").innerHTML+=`${obj.name}`
     document.getElementById("allapot").innerHTML+=`${obj.state}`
-    document.getElementById("fophpar").innerHTML+=`${obj.price}`
+    document.getElementById("fophpar").innerHTML+=`${obj.price}Ft`
     document.getElementById("leiras").innerHTML+=`${obj.descr}`
-    document.getElementById("fookep").src=`${obj.mainImg}`
+    document.getElementById("fookep4").src=`${obj.mainImg}`
     }
+  }
+  function showdata(id){
+    console.log(id)
+location.href="index.php?prog=termek.php&id="+id;
   }
   </script>
