@@ -87,7 +87,7 @@
 
 
 <div class="row">
-<h5 class="o-block-heading" id="social-media"><strong>média:</strong></h5>
+<h5 class="o-block-heading" id="social-media"><strong>Média:</strong></h5>
 
 <p class="has-text-color "><a href="#">Facebook</a></p>
 
