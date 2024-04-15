@@ -14,6 +14,8 @@
 <link rel="stylesheet" href="css/o2.css">
 <link rel="stylesheet" href="css/o.css">
 <link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/termek.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <script src="getData.js"></script>
 
 
@@ -52,7 +54,7 @@
 </nav>
 
 <div  class="logo pull-right " id="logolinkdiv"> 
-<a href="index.php" title="Switcher" id="logolinka"> 
+<a href="index.php" title="Logo" id="logolinka"> 
 <img id="thelogo" src="https://i.ibb.co/CMkVwWR/logomid.png" alt="logomid" >
 </a>
 </div>

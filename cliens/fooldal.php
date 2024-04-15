@@ -86,7 +86,7 @@
 
 
 
-<p class="has-text-align-center ">egy kommentelő</p>
+<p class="has-text-align-center ">Kocsis Ágnes Virág</p>
 </div>
 
 
@@ -97,7 +97,7 @@
 
 
 
-<p class="">Jelentkezz email-es rendszeres értesítőnikre! Ne hogy lemaradj a legújjab ajánlatokról!</p>
+<p class="">Jelentkezz email-es rendszeres értesítőinkre! Ne hogy lemaradj a legújjab ajánlatokról!</p>
 
 
 </div>
