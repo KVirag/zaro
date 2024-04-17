@@ -13,7 +13,10 @@
 
 
 <div class="o-block-buttons">
-<div class="o-block-button is-style-outline"><a class="o-block-button__link o-element-button" style="border-radius:0px " href="index.php?prog=bongesz.php">Vásárolj most!</a></div>
+<div class="o-block-button is-style-outline">
+  <a class="o-block-button__link o-element-button" style="border-radius:0px " href="index.php?prog=bongesz.php">Vásárolj most!
+  </a>
+</div>
 </div>
 </div>
 </div>

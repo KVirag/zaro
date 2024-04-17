@@ -5,7 +5,6 @@
     <meta name="vieoort" content="width=device-width, initial-scale=1.0">
     <title>Kint-bent Sport</title>
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
- <!--   <link href="css/template.css" rel="stylesheet" media="screen"> -->
 <link rel="stylesheet" href="css/navbar.css" media="screen">
 <link rel="stylesheet" href="css/fa.min.css" media="screen">
 <link rel="stylesheet" href="css/gfonts.min.css" media="screen">
@@ -15,6 +14,7 @@
 <link rel="stylesheet" href="css/o.css">
 <link rel="stylesheet" href="css/footer.css">
 <link rel="stylesheet" href="css/termek.css">
+<link rel="stylesheet" href="css/bongesz.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <script src="getData.js"></script>
 
