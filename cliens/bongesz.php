@@ -38,7 +38,7 @@
 
 </div>
 </div>
-<div class="b-termekek" id="b_termek_sorok">   <!-- címkép, idő, leírás, kategória, ár -->
+<div class="b-termekek" id="b-termek-sorok">   <!-- címkép, idő, leírás, kategória, ár -->
 
 
 </div>
@@ -71,6 +71,7 @@ let hely = document.getElementById("hely").value;
 let idov = document.getElementById("ido").innerHTML;
 let arv = document.getElementById("ar").innerHTML;
 let ar;let ido;
+console.log(kat, hely)
 if(arv =="csökkenő"){
 ar="DESC"
 }
@@ -89,15 +90,10 @@ console.log(ido+", "+ar)
 getData(`../server/bongeszsql.php?kat=${kat}&hely=${hely}&iar=${ar}&iido=${ido}`, kigyujt);
 function kigyujt (data){
 
-    let sor = document.getElementById("b_termek_sorok");
-    sor.parentNode.removeChild(sor);
-    let tmk = document.createElement("div");
-    tmk.id = "tmk";
-    sor.appendChild(tmk);
-
+    document.getElementById("b-termek-sorok").innerHTML="";
     
     for(let obj of data){
-        document.getElementById("b_termek_sorok").innerHTML+=`
+        document.getElementById("b-termek-sorok").innerHTML+=`
         <div class='o-block-group alignwide" style="padding-top:5vh;padding-bsottom:5vh'>
 <div class="o-block-columns" id="">
 
