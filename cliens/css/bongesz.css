@@ -1,5 +1,25 @@
-.b-termek{
+
+.main{
+    
+    background-color: rgb(94, 83, 100);
     padding-top: 10%;
-    background-color: rgba(32, 20, 71);
+    padding-bottom: 5%;
+  }
+  .b-termek{
+    
+    background-color: rgb(94, 83, 100);
     color: white;
+}
+.elem{
+    padding: 1%;
+}
+.szurok{
+    padding: 1%;
+
+}
+#btnszuro{
+    color: white;
+}
+#ido,#ar:hover{
+    cursor: pointer;
 }

@@ -1,50 +1,68 @@
-<div class="container">
-<div class="o-block-group alignwide" style="padding-top:5vh;padding-bottom:5vh">
-<div class=" o-block-columns b-termek w-100">
-<div class="szurok">
+
+<div class="main">
+<div class="o-block-group alignwide b-termek szurok" style="padding-top:5vh;padding-bottom:5vh">
+<div class=" o-block-columns ">
+  
+<div class="o-block-column">
   <div class="elem b-hely">
         <select class="form-select" id="hely">
           <option value="0">Hely</option>
         </select>
       </div>
+      
+</div>
+<div class="o-block-column">
   <div class="elem b-kat">
         <select class="form-select" id="kategoria">
           <option value="0">Válassz egy kategóriát!</option>
         </select>
       </div>
+      </div>
       
+      <div class="o-block-column">
       <div class="elem b-ar">
-        <h3>ár:</h3> <p id="ar" onclick="ar(this)">csökkenő</p>
+        <h3>ár:</h3> <p id="ar" onclick="ar()">csökkenő</p>
       </div>
+      </div>
+
+      <div class="o-block-column">
       <div class="elem b-ido">
-      <h3>feltöltés ideje:</h3> <p id="ido" onclick="ido(this)">legújjabb</p>
+      <h3>feltöltés ideje:</h3> <p id="ido" onclick="ido()">legújjabb</p>
       </div>
+      </div>
+      <div class="o-block-column">
       <div class="elem b-ok">
-      <button class="btn btn-outline-dark" id="btnSzuro" >Alkalmaz</button>
-      </div>
+      <button class="btn btn-outline-dark w-100" id="btnSzuro" >Alkalmaz</button>
+      </div></div>
     </div> <!-- szűrés kategóriára, időre, hely, árra -->
-<div class="b-termekek">   <!-- címkép, idő, leírás, kategória, ár -->
-
-<div class="o-block-group alignwide" style="padding-top:5vh;padding-bottom:5vh">
-<div class="o-block-columns">
-<div class="o-block-column fokepdiv">
-
-</div>
-
-
-
-<div class="o-block-column">
-</div>
-</div>
-
 
 </div>
 </div>
-</div>
-</div>
+<div class="b-termekek" id="b_termek_sorok">   <!-- címkép, idő, leírás, kategória, ár -->
+
+
 </div>
 <script>
-
+function ar(){
+  let ara =document.getElementById("ar").innerHTML
+  
+if(ara =="csökkenő"){
+document.getElementById("ar").innerHTML="növekvő"
+}
+if(ara =="növekvő"){
+  document.getElementById("ar").innerHTML="csökkenő"
+}
+}
+function ido(){
+  
+  let idoi =document.getElementById("ido").innerHTML
+if(idoi =="legújjabb"){
+  document.getElementById("ido").innerHTML="legrégibb"
+}
+if(idoi =="legrégibb"){
+  document.getElementById("ido").innerHTML="legújjabb"
+}
+}
 
   document.getElementById("btnSzuro").addEventListener("click", function () {
 
@@ -56,40 +74,56 @@ let ar;let ido;
 if(arv =="csökkenő"){
 ar="DESC"
 }
+
+if(arv =="növekvő"){
+ar="ASC"
+}
 if(idov =="legújjabb"){
+ido="DESC"
+}
+if(idov =="legrégibb"){
 ido="ASC"
 }
 console.log(idov+", "+arv)
 console.log(ido+", "+ar)
-getData(`../server/szurtAdat.php?iido=${ido}&kat=${kat}&hely=${hely}&iar=${ar}`, kigyujt);
+getData(`../server/bongeszsql.php?kat=${kat}&hely=${hely}&iar=${ar}&iido=${ido}`, kigyujt);
 function kigyujt (data){
 
-    let elem = document.getElementById("cikkek");
-    elem.parentNode.removeChild(elem);
-    let cikkek = document.createElement("div");
-    cikkek.id = "cikkek";
-    let container = document.querySelector(".container");
-    container.appendChild(cikkek);
+    let sor = document.getElementById("b_termek_sorok");
+    sor.parentNode.removeChild(sor);
+    let tmk = document.createElement("div");
+    tmk.id = "tmk";
+    sor.appendChild(tmk);
 
-    <figure class="o-block-image size-large" onclick="showdata('{$psid}')"><img src="{$mainImg}" alt="" id="fookep4"class="o-image-19"/></figure>
+    
     for(let obj of data){
-        document.querySelector("#cikkek").innerHTML+=`
-        <a href="index.php?prog=cikkoldal.php&id=${obj.id}" onclick="oldal()">
-          <div class="fade-card" tabIndex="0">
-              <div class="fade-card-front" style="background-image: url('${obj.borito}');">
-                <div class="leirashatter">
-                  <h5 class="leiras">${obj.roviden}</h5>
-                </div>
-              </div>
+        document.getElementById("b_termek_sorok").innerHTML+=`
+        <div class='o-block-group alignwide" style="padding-top:5vh;padding-bsottom:5vh'>
+<div class="o-block-columns" id="">
 
-              <div class="fade-card-back" style="background-image: url('${obj.borito}');">
-                <div class="cimhatter">
-                  <h1 class="cim">${obj.cim}</h1>
-                </div>
-              </div>
-            </div>
-            </a>
-            <p class="fakeimg"></p>
+<div class="o-block-column fokepdiv">
+
+<figure class="o-block-image size-large" onclick="showdata('${obj.psid}')"><img src="${obj.mainImg}" alt="" id="fookep4"class="o-image-19"/></figure>
+</div>
+
+
+
+<div class="o-block-column">
+<h4 class="o-block-heading" id="fotermeknev" style="font-style:normal;font-weight:500">${obj.pname}</h4>
+<p class="">${obj.price}Ft</p>
+<div style="height:40px" aria-hidden="true" class="o-block-spacer"></div>
+<p class="">${obj.state}:</p>
+<p id="allapot"><strong>${obj.descr}</strong></p>
+<p><strong>feltöltés ideje:</strong></p>
+<p class="leiras"  id="leiras">${obj.time}</p>
+
+</div>
+</div>
+
+
+</div>
+
+
           `
     }
 }
@@ -99,7 +133,7 @@ getData('../server/hely.php', renderHely);
   function renderHely(data){
     for(let obj of data){
     document.getElementById("hely").innerHTML+=`
-        <option>${obj.state}</option>
+        <option>${obj.adress}</option>
       `
     }
   }

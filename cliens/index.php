@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="vieoort" content="width=device-width, initial-scale=1.0">
     <title>Kint-bent Sport</title>
-<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 <link rel="stylesheet" href="css/navbar.css" media="screen">
 <link rel="stylesheet" href="css/fa.min.css" media="screen">
 <link rel="stylesheet" href="css/gfonts.min.css" media="screen">

@@ -1,6 +1,6 @@
 <?php 
 require_once "db.php";
-$sql="SELECT state FROM products WHERE 1";
+$sql="SELECT adress FROM products WHERE 1 group by adress";
 $stmt =$db->query($sql);
 echo json_encode($stmt->fetchAll());
 
